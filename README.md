@@ -1,5 +1,7 @@
-# Frappe-ERPNext-Version-14--in-Ubuntu-22.04-LTS
-A complete Guide to Install Frappe/ERPNext version 14  in Ubuntu 22.04 LTS
+# Install ERPNext-v14-on-Ubuntu-22.04-LTS
+A step-by-step to install Frappe/ERPNext version 14  in Ubuntu 22.04 LTS.
+Please note that from version 14 onwards ERPNext has changed its architecture from its monolothic configuration that bundled all modules together 
+and has split the application into separate modules. As such, there are additional steps to install different modules after initial setup. 
 
 
 
@@ -75,13 +77,9 @@ A complete Guide to Install Frappe/ERPNext version 14  in Ubuntu 22.04 LTS
  
        Reload privilege tables now? [Y/n] Y
        ... Success!
-
- 
-    
     
     
 ### STEP 6  MySQL database development files
-
     sudo apt-get install libmysqlclient-dev
 
 ### STEP 7 Edit the mariadb configuration ( unicode character encoding )
@@ -114,7 +112,6 @@ add this to the 50-server.cnf file
     [mysql]
     default-character-set = utf8mb4
 
-Now press (Ctrl-X) to exit
 
     sudo service mysql restart
 
